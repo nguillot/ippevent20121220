@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>REX Judopro</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/messages.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	
+	<body>
+		
+		<div class="reveal">
+
+			<div class="slides">
+				<section>
+                    <h1>REX Judopro</h1>
+                    <p>
+                        <i>
+                            <small>
+                                - Nicolas Guillot / <a href="http://twitter.com/nicolas_guillot">@nicolas_guillot</a>
+                                / nguillot@ippon.fr
+                                / <a href="http://www.ippon-mobile.fr/blog/">Blog mobilité Ippon</a>
+                                <br />Développeur Mobile: iOS / Android / HTML5 -
+                            </small>
+                        </i>
+                    <p>
+                        <a href="" class="image">
+                            <img width="227" height="110" src="./images/logo.png" alt="Logo Ippon">
+                        </a>
+				</section>
+
+                <section>
+                    <h2>Dev natif vs dev hybride</h2>
+                    <ul>
+                        <li>Caractéristiques : dev natif et hybride</li>
+                        <li>Problèmes rencontrés</li>
+                        <li>Quels axes d'améliorations?</li>
+                        <li>Que choisir ?</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Dev natif vs dev hybride</h2>
+                    <ul>
+                        <li><strong>Caractéristiques : dev natif et hybride</strong></li>
+                        <li>Problèmes rencontrés</li>
+                        <li>Quels axes d'améliorations?</li>
+                        <li>Que choisir ?</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Caractéristiques (1/2)</h2>
+                    <p>Natif :</p>
+                    <ul>
+                        <li>Chaque OS porte ses propres conventions ergonomiques</li>
+                        <li>Permet de maximiser l'expérience utilisateur</li>
+                        <li>Les coûts peuvent devenir important si on doit développer pour plusieurs plateformes.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Caractéristiques (2/2)</h2>
+                    <p>Hybride :</p>
+                    <ul>
+                        <li>Porte la promesse de réutiliser tout ou partie du code entre les différents OS.</li>
+                        <li>De multiple solutions techniques existes (Angular, Backbone, Zepto, JQuery..)</li>
+                        <li>Plus la vue est compliquée, plus son temps de développement se rapproche du natif. Mais on mutualise.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Dev natif vs dev hybride</h2>
+                    <ul>
+                        <li>Caractéristiques : dev natif et hybride</li>
+                        <li><strong>Problèmes rencontrés</strong></li>
+                        <li>Quels axes d'améliorations?</li>
+                        <li>Que choisir ?</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Problèmes rencontrés</h2>
+                    <ul>
+                        <li><strong>Application iOS</strong></li>
+                        <li>Application hybride</li>
+                        <li>Problèmes communs</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Application iOS (1/3)</h2>
+                    <ul>
+                        <li>Prise en main du langage : seul l'expérience ou une formation adéquate permet d'utiliser les conventions adaptées.</li>
+                        <li>Le langage évolue rapidement, penser à un choix viable pour le futur.</li>
+                        <li>Problématique de l'achat in-app : il faut rentrer dans le moule Apple.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Application iOS (2/3)</h2>
+                    <ul>
+                        <li>Validation Apple : prévoir un délai conséquent, en cas de refus il faut s'adapter à leur langage, tout est policé.</li>
+                        <li>Taille et temps de réponse de l'appli : suivre les bonnes pratiques et minimiser l'utilisation des images pour la construction de l'interface.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Application iOS (3/3)</h2>
+                    <ul>
+                        <li>Attention aux scroll horizontal : ne charger que quelques élements</li>
+                        <li>Faire de la veille en suivant les WWDC : astuces, nouveautés</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Problèmes rencontrés</h2>
+                    <ul>
+                        <li>Application iOS</li>
+                        <li><strong>Application hybride</strong></li>
+                        <li>Problèmes communs</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Application hybride (1/5)</h2>
+                    <ul>
+                        <li>Bien choisir ses frameworks en fonction de son utilisation et de son équipe.</li>
+                        <li>Attention à l'utilisation multiplateforme de PhoneGap : éviter de charger <em>cordova.js</em> à chaud.</li>
+                        <li>Une interface pensée en natif peut ne pas correspondre à une interface HTML5.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Application hybride (2/5)</h2>
+                    <ul>
+                        <li>Problème avec PhoneGap pour lire les vidéos Youtube.</li>
+                        <li>Penser aux transitions entre les pages, mais penser aussi à tester sur les devices cibles!</li>
+                        <li>Utilisation de plugins PhoneGap pour l'achat in-app et la publicité.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Application hybride (3/5)</h2>
+                    <p>Performances webview/Sencha Touch 2:</p>
+                    <a href="" class="image">
+                        <img src="./images/sencha-iOS.png" alt="Logo Ippon">
+                    </a>
+                    <p><small>Source : <a href="https://speakerdeck.com/mgcrea/PhoneGap-plugins-meetup-paris-at-adobefrance">Meetup PhoneGap</a> Olivier Louvignes</small></p>
+                </section>
+
+                <section>
+                    <h2>Application hybride (4/5)</h2>
+                    <p>Performances webview/Sencha Touch 2:</p>
+                    <a href="" class="image">
+                        <img src="./images/sencha-Android.png" alt="Performances Sencha touch2">
+                    </a>
+                    <p><small>Source : <a href="https://speakerdeck.com/mgcrea/PhoneGap-plugins-meetup-paris-at-adobefrance">Meetup PhoneGap</a> Olivier Louvignes</small></p>
+                </section>
+
+                <section>
+                    <h2>Application hybride (5/5)</h2>
+                    <p>Différence de support HTML5/CSS/JS/SVG:</p>
+                    <a href="" class="image">
+                        <img src="./images/htmlSupport.png" alt="Adoption HTML JS CSS sur Android et iOS">
+                    </a>
+                    <p><small>Source : <a href="http://caniuse.com/#agents=ios_saf,android">Can I use...</a></small></p>
+                </section>
+
+                <section>
+                    <h2>Problèmes rencontrés</h2>
+                    <ul>
+                        <li>Application iOS</li>
+                        <li>Application hybride</li>
+                        <li><strong>Problèmes communs</strong></li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Problèmes communs</h2>
+                    <ul>
+                        <li>Gestion des images: tailles et pixel ratio -> service adapté à notre besoin</li>
+                        <li>Utilisation de cache client et serveur</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Dev natif vs dev hybride</h2>
+                    <ul>
+                        <li>Caractéristiques : dev natif et hybride</li>
+                        <li>Problèmes rencontrés</li>
+                        <li><strong>Quels axes d'améliorations?</strong></li>
+                        <li>Que choisir ?</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Axes d'améliorations</h2>
+                    <ul>
+                        <li><strong>Comment améliorer l'existant?</strong></li>
+                        <li>Est-il possible d'améliorer le rapport expérience utilisateur / coûts ?</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Axes d'améliorations</h2>
+                    <p>Comment améliorer l'existant?</p>
+                    <ul>
+                        <li><strong>Améliorer l'architecture de l'application web : pistes possibles dans le livre <a href="http://www.css-maintenables.fr">CSS Maintenables</a></strong></li>
+                        <li>Utiliser un framework MVC plus adapté.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Axes d'améliorations</h2>
+                    <p>Comment améliorer l'existant?</p>
+                    <ul>
+                        <li>Améliorer l'architecture de l'application web : pistes possibles dans le livre <a href="http://www.css-maintenables.fr">CSS Maintenables</a></li>
+                        <li><strong>Utiliser un framework MVC plus adapté.</strong></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Axes d'améliorations</h2>
+                    <ul>
+                        <li>Comment améliorer l'existant?</li>
+                        <li><strong>Est-il possible d'améliorer le rapport expérience utilisateur / coûts ?</strong></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Axes d'améliorations : expérience utilisateur / coûts</h2>
+                    <p>Différentes visions possibles :</p>
+                    <ul>
+                        <li><strong>Tout natif : améliorer sa productivité</strong></li>
+                        <li>Avoir une interface hybride HTML/native</li>
+                        <li>Avoir un code métier "cross plateform"</li>
+                    </ul>
+                    <br />
+                    <p><small>Source : intérprétation très personnelle d'un <a href="http://martinfowler.com/articles/multiMobile/">article</a> de Martin Fowler.</small></p>
+                </section>
+
+                <section>
+                    <h2>Axes d'améliorations : améliorer sa productivité</h2>
+                    <ul>
+                        <li>Pour iOS <a href="http://developer.apple.com/library/mac/#releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html">ARC est disponible</a> à partir d'iOS 4.</li>
+                        <li>Utilisation des Storyboard et des dernières avancés d'Objective-C si possibles.</li>
+                        <li>Utilisation de libraries utilitaires :  <a href="http://restkit.org">RestKit</a>,
+                            <a href="http://www.touch-code-magazine.com/JSONModel/">JSONModel</a>,
+                            <a href="http://blog.mugunthkumar.com/products/ios-framework-introducing-mknetworkkit/">MKNetworkKit</a>,
+                            <a href="https://github.com/luisobo/Nocilla">Nocilla</a> stubs, ...</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Axes d'améliorations : expérience utilisateur / coûts</h2>
+                    <p>Différentes visions possibles :</p>
+                    <ul>
+                        <li>Tout natif : améliorer sa productivité</li>
+                        <li><strong>Avoir une interface hybride HTML/native</strong></li>
+                        <li>Avoir un code métier "cross plateform"</li>
+                    </ul>
+                    <br />
+                    <p><small>Source : intérprétation très personnelle d'un <a href="http://martinfowler.com/articles/multiMobile/">article</a> de Martin Fowler.</small></p>
+                </section>
+
+                <section>
+                    <h2>Axes d'améliorations : interface hybride</h2>
+                    <p><small><a href="http://mobile.smashingmagazine.com/2012/06/18/mobile-considerations-in-user-experience-design-web-or-native/">Smashing Magazine :</a> </small></p>
+                    <blockquote cite="http://mobile.smashingmagazine.com/2012/06/18/mobile-considerations-in-user-experience-design-web-or-native/">
+So, write once, run anywhere is a dangerous myth. Cross-platform applications that compete successfully are write once, optimize everywhere.
+                    </blockquote>
+                </section>
+
+                <section>
+                    <h2>Axes d'améliorations : interface hybride</h2>
+                    <p><strong>Une interface purement web n'aura jamais la même ergonomie qu'une interface native.</strong>
+                    Comment améliorer l'intégration de l'app dans l'OS et l'expérience utilisateur ?</p>
+                </section>
+
+                <section>
+                    <h2>Axes d'améliorations : interface hybride</h2>
+                    <ul>
+                        <li>Utiliser avec parcimonie les élements d'interface HTML.</li>
+                        <li>Utiliser différents plugins PhoneGap pour représenter les différents paradigme UI selon l'OS :
+                            <a href="https://github.com/mgcrea/cordova-actionsheet">ActionSheet</a>
+                        </li>
+                        <li>Jongler entre les Webview (sans les multiplier) pour pouvoir utiliser les composants de navigation natifs.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Axes d'améliorations : expérience utilisateur / coûts</h2>
+                    <p>Différentes visions possibles :</p>
+                    <ul>
+                        <li>Tout natif : améliorer sa productivité</li>
+                        <li>Avoir une interface hybride HTML/native</li>
+                        <li><strong>Avoir un code métier "cross plateform"</strong></li>
+                    </ul>
+                    <br />
+                    <p><small>Source : intérprétation très personnelle d'un <a href="http://martinfowler.com/articles/multiMobile/">article</a> de Martin Fowler.</small></p>
+                </section>
+
+                <section>
+                    <h2>Axes d'améliorations : code métier "cross plateform"</h2>
+                    <p>Titanium (dev JS, génération code natif) : </p>
+                    <ul>
+                        <li>Le code est généré: comment l'optimiser?</li>
+                        <li>Au niveau des fonctionnalités : + petit dénominateur commun</li>
+                        <li>Accès aux dernières fonctionnalités natives ?</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Axes d'améliorations : code métier "cross plateform"</h2>
+                    <p>Solution naissante : <a href="http://calatrava.github.com">Calatrava</a></p>
+                    <ul>
+                        <li>Code métier en JS.</li>
+                        <li>Permet aussi de mélanger interface native et HTML.</li>
+                        <li>Pour les apps ayant un code métier complexe.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Axes d'améliorations : code métier "cross plateform"</h2>
+                    <p>Pour une solution "maison" on peut aussi utilisé la
+                        <a href="https://github.com/zynga/jsbindings#readme">technique</a>
+                        employée par cocos2d (<a href="https://github.com/zynga/jsbindings">binding</a> API native vers JS).</p>
+                    <ul>
+                        <li>Pour les apps ayant un code métier complexe.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Dev natif vs dev hybride</h2>
+                    <ul>
+                        <li>Caractéristiques : dev natif et hybride</li>
+                        <li>Problèmes rencontrés</li>
+                        <li>Quels axes d'améliorations?</li>
+                        <li><strong>Que choisir ?</strong></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Que choisir ?</h2>
+                    <ul>
+                        <li><strong>Ne pas oublier les guidlines</strong></li>
+                        <li>Quelques pistes</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Guidelines</h2>
+                    <p>Viser l'excellence...</p>
+                    <blockquote cite="http://mobile.smashingmagazine.com/2012/06/18/mobile-considerations-in-user-experience-design-web-or-native/">
+Remember that there are already too many things out there. We don’t need more things. We need things that work better.
+                    </blockquote>
+                </section>
+
+                <section>
+                    <h2>Guidelines</h2>
+                    <p>Pour les utilisateurs...</p>
+                    <blockquote cite="http://mobile.smashingmagazine.com/2012/06/18/mobile-considerations-in-user-experience-design-web-or-native/">
+                        The worst thing you could do, of course, is disrespect all of your users by creating a lowest-common-denominator application that gives every user on every platform an unoptimized user experience.
+                    </blockquote>
+                </section>
+
+                <section>
+                    <h2>Guidelines</h2>
+                    <p>Dans la culture de son OS!</p>
+                    <blockquote cite="http://mobile.smashingmagazine.com/2012/06/18/mobile-considerations-in-user-experience-design-web-or-native/">
+NATIVE IS NOT NECESSARILY BETTER, BUT IT IS NATIVE. The only way to create applications that conform to the norms — that is, the culture and language — of a given platform is to use native technologies.
+                    </blockquote>
+                </section>
+
+                <section>
+                    <h2>Que choisir ?</h2>
+                    <ul>
+                        <li>Ne pas oublier les guidlines</li>
+                        <li><strong>Quelques pistes</strong></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Quelques pistes</h2>
+                    <p>Les applications hybrides peuvent être plus appropriées pour :</p>
+                    <ul>
+                        <li>Les applications centrées sur leur contenu</li>
+                        <li>Les applications utilisant peu d'éléments graphiques natif (jeux, ebook..)</li>
+                        <ul>
+                            <li>Attention, on peut être contraint par des problèmes de performances ou d'UI spécifique.</li>
+                        </ul>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Quelques pistes</h2>
+                    <p>Les applications natives peuvent être plus appropriées pour :</p>
+                    <ul>
+                        <li>Les applications centrées sur le comportement : l'utilisateur produit du contenu.</li>
+                        <li>Les applications necessitant des composants natifs spécifiques (paiement, élément UI)</li>
+                        <li>Les applications voulant fournir une expérience utilisateur optimisée.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Quelques pistes</h2>
+                    <p>Les web app / sites dédiés / sites adaptés (responsive) peuvent être plus appropriés pour :</p>
+                    <ul>
+                        <li>Les sites voulant couvrir un maximum de population (e-commerce, réseaux sociaux) : attention à leurs optimisations sur les différentes plateformes!</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Des questions ?</h1>
+                </section>
+
+                <section id="fin">
+                    <h1>Merci</h1>
+                    <p>
+                        <i>
+                            <small>
+                                - Nicolas Guillot / <a href="http://twitter.com/nicolas_guillot">@nicolas_guillot</a>
+                                / nguillot@ippon.fr
+                                / <a href="http://www.ippon-mobile.fr/blog/">Blog mobilité Ippon</a>
+                                <br />Développeur Mobile: iOS / Android / HTML5 -
+                            </small>
+                        </i>
+                    <p>
+                        <a href="" class="image">
+                            <img width="227" height="110" src="./images/logo.png" alt="Logo Ippon">
+                        </a>
+                </section>
+            </div>
+			
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/zoom-js/zoom.js', condition: function() { return !!document.body.classList; } },
+					{ src: '/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } }
+				]
+			});
+			
+		</script>
+
+	</body>
+</html>
